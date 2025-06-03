@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<video autoplay muted loop id="background-video">
+<source src="Recursos/Fondo.mp4" type="video/mp4">
+</video>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Gamer</title>
+  <link rel="stylesheet" href="catalogo.css">
+  <script>
+    if (!localStorage.getItem('isLoggedIn')) {
+      window.location.href = 'index.html';
+    }
+  </script>
+</head>
+<body class="catalog-body">
+  <header>
+    <h1>Catálogo Gamer</h1>
+    <button onclick="logout()">Cerrar sesión</button>
+    <button onclick="toggleMusic()">Música</button>
+    <audio id="bg-music" src="Recursos/music.mp3" loop></audio>
+  </header>
+  <main id="catalog">
+    <div onclick="window.location.href='https://www.mediafire.com/file/wlc5d1523p8tr8l/Gta_V_-_TheFenix010.rar/file'"style="cursor:pointer;">
+      <img src="Recursos/GTAV.jpg" alt="GTA V">
+      <h3>Grand Theft Auto V</h3>
+    </div>
+    <div onclick="window.location.href='https://www.minecraft.net/es-es/download'"style="cursor:pointer;">
+      <img src="Recursos/Minecraft.png" alt="Minecraft">
+      <h3>Minecraft Bedrock & Java</h3>
+    </div>
+    <div onclick="window.location.href='https://www.mediafire.com/file/evgn26offfrreiw/NFSMW_-_TheFenix010.rar/file'"style="cursor:pointer;">
+      <img src="Recursos/NFSMW.jpg" alt="NFS MW">
+      <h3>Need For Speed Most Wanted</h3>
+    </div>
+   <div onclick="window.location.href='https://www.mediafire.com/file/dbblta7jxxpliwx/CODO_2.rar/file'"style="cursor:pointer;">
+      <img src="Recursos/COD2.jpg" alt="COD 2">
+      <h3>Call Of Duty 2</h3>
+    </div>
+  </main>
+  <script src="catalogo.js"></script>
+</body>
+</html>
